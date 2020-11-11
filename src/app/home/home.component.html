@@ -1,0 +1,24 @@
+<div class="header">
+  <div>
+    <span> Welcome , {{username}} | </span><span class="logout" (click)="logout()">Logout</span>
+  </div>
+</div>
+<div class="card">
+  <div class="table-title">Data</div>
+  <table>
+    <tr>
+      <th>Make</th>
+      <th>Max_speed</th>
+      <th>Engine_size</th>
+      <th>Created_date</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let item of items| async;let i=index;">
+      <td><input [ngClass]="{'edit': i == editIndex}" [disabled]="!(i == editIndex)" class="border-none" [(ngModel)]="item.Make"></td>
+      <td><input [ngClass]="{'edit': i == editIndex}" [disabled]="!(i == editIndex)" [(ngModel)]="item.Max_speed" class="border-none"></td>
+      <td><input [ngClass]="{'edit': i == editIndex}" [disabled]="!(i == editIndex)" [(ngModel)]="item.Engine_size" class="border-none"></td>
+      <td><input [ngClass]="{'edit': i == editIndex}" [disabled]="!(i == editIndex)" [(ngModel)]="item.Created_date" class="border-none"></td>
+      <td><span *ngIf="!(i == editIndex)" (click)="edit(i)">edit</span>&nbsp;<span *ngIf="i == editIndex" (click)="update(item)">update</span>&nbsp;<span (click)="delete(item)">delete</span></td>
+    </tr>
+  </table>
+</div>

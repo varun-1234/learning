@@ -1,0 +1,62 @@
+@import "../styles/variable.scss";
+.header {
+  text-align: right;
+  background: $inteligencia;
+  padding: 22px;
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: $inteligencia_font;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  div {
+    padding-right: 50px;
+  }
+  .logout {
+    cursor: pointer;
+  }
+}
+.card {
+  border-radius: 4px;
+  background-color: $card_background;
+  box-shadow: $card_shadow;
+  box-sizing: border-box;
+  width: 80%;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  left: 0;
+  input {
+    background: $card_background;
+    text-align: center;
+  }
+  .table-title {
+    padding: 10px;
+    background: gainsboro;
+    font-weight: 600;
+  }
+  table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  td,
+  th {
+    border: 1px solid black;
+  }
+  .border-none {
+    border: none;
+    outline: none;
+  }
+  .edit {
+    border: 1px solid black !important;
+  }
+  span {
+    cursor: pointer;
+  }
+}

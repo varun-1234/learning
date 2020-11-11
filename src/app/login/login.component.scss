@@ -1,0 +1,84 @@
+@import "../styles/variable.scss";
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+.login-cont {
+  .mdc-card {
+    border-radius: 4px;
+    background-color: $card_background;
+    box-shadow: $card_shadow;
+    box-sizing: border-box;
+    width: 384px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    left: 0;
+    .normal-login {
+      div {
+        margin: 10px auto;
+        text-align: center;
+      }
+      input {
+        width: 250px;
+        height: 32px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        outline: none;
+        border-radius: 5px;
+      }
+      .login-btn {
+        background: $inteligencia;
+        outline: none;
+        border: none;
+        width: 100px;
+        height: 26px;
+        font-size: 16px;
+        color: $inteligencia_font;
+        cursor: pointer;
+        border-radius: 2px;
+      }
+    }
+    .google-login {
+      .google-btn {
+        margin: 0 auto;
+        width: 184px;
+        height: 42px;
+        background-color: $google-blue;
+        border-radius: 2px;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+        .google-icon-wrapper {
+          position: absolute;
+          margin-top: 1px;
+          margin-left: 1px;
+          width: 40px;
+          height: 40px;
+          border-radius: 2px;
+          background-color: $white;
+        }
+        .google-icon {
+          position: absolute;
+          margin-top: 11px;
+          margin-left: 11px;
+          width: 18px;
+          height: 18px;
+        }
+        .btn-text {
+          float: right;
+          margin: 11px 11px 0 0;
+          color: $white;
+          font-size: 14px;
+          letter-spacing: 0.2px;
+          font-family: "Roboto";
+        }
+        &:hover {
+          box-shadow: 0 0 6px $google-blue;
+        }
+        &:active {
+          background: $button-active-blue;
+        }
+      }
+    }
+  }
+}
